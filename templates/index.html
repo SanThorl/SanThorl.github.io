@@ -16,17 +16,17 @@
                     </script> 
                 <!-- end of service worker -->
         <!-- start of web manifest -->
-        <link rel="manifest" href="/manifest.json">
+	<link rel="manifest" href="{{url-for('static', filename='/manifest.json')}}">
          <!-- end of web manifest -->
            <!-- theme-color -->
         <meta name="theme-color" content="#fff" />
         <!-- end-theme-color -->
-        <script src="assets/jquery.min.js"></script> 
-        <script src="assets/skel.min.js"></script>
-        <script src="assets/util.js"></script>
-        <script src="assets/respond.min.js"></script>
-        <script src="assets/responsive.js"></script>
-        <link rel="stylesheet" href="assets/main.css" />
+	<script src="{{url_for('static', filename='assets/jquery.min.js')}}"></script> 
+	<script src="{{url_for('static', filename='assets/skel.min.js')}}"></script>
+	<script src="{{url_for('static', filename='assets/util.js')}}"></script>
+	<script src="{{url_for('static', filename='assets/respond.min.js')}}"></script>
+	<script src="{{url_for('static', filename='assets/responsive.js')}}"></script>
+	<link rel="stylesheet" href="{{url_for('static', filename='assets/main.css')}}" />
         <title>PWA Fire Codelab Demo</title>
         <meta charset="utf-8">
             
@@ -56,9 +56,9 @@
                         
 <article id="home" class="panel special" style="display: flex;">
                             
-   <div class="image" style="background-image: url(&quot;images/GJ.jpg&quot;); background-position: center center;">
+	<div class="image" style="background-image: url(&quot;{{url_for('static', filename='images/GJ.jpg')}}&quot;); background-position: center center;">
     
-    <img src="images/GJ.jpg" alt="" data-position="center center" 
+		<img src="{{url_for('static', filename='images/GJ.jpg')}}" alt="" data-position="center center" 
                                 
    style="display: none;">
                             
@@ -111,8 +111,8 @@
     
     <article id="work" class="panel secondary inactive" style="display: none;">
            
-        <div class="image" style="background-image: url(&quot;images/pic04.jpg&quot;);background-position: center center;">
-        <img src="images/pic04.jpg" alt="" data-position="center center" style="display: none;">
+	    <div class="image" style="background-image: url(&quot;{{url_for('static', filename='images/pic04.jpg')}}&quot;);background-position: center center;">
+		    <img src="{{url_for('static', filename='images/pic04.jpg')}}" alt="" data-position="center center" style="display: none;">
         </div> 
         <div class="content">
         <ul class="actions spinX"><li>
@@ -154,8 +154,8 @@
                         
         <article id="about" class="panel secondary inactive" style="display: none;">
                             
-        <div class="image" style="background-image: url(&quot;images/GJ.jpg&quot;); background-position: center center;">
-        <img src="images/GJ.jpg" alt="" data-position="center center" style="display: none;">
+		<div class="image" style="background-image: url(&quot;{{url_for('static', filename='images/GJ.jpg')}}&quot;); background-position: center center;">
+			<img src="{{url_for('static', filename='images/GJ.jpg')}}" alt="" data-position="center center" style="display: none;">
          </div>
     
          <div class="content">
@@ -175,7 +175,7 @@
             <header>
 
             <h2>About</h2>
-            <p>A student from Computer University, Mandalay. <br> Founder of GaJ Myanmar Traditional Food Co.,ltd.</p>
+            <p>A student from Computer University, Mandalay. <br> Learner of cloudnative development.</p>
 
             </header>
             <p> 
@@ -197,9 +197,9 @@
      
       <article id="contact" class="panel secondary inactive" style="display: none;">
                 
-            <div class="image" style="background-image: url(&quot;images/GJ.jpg&quot;); background-position: center bottom;">
+	      <div class="image" style="background-image: url(&quot;{{url_for('static', {{url_for('static', filename='images/GJ.jpg')}}&quot;); background-position: center bottom;">
                 
-            <img src="images/GJ.jpg" alt="" data-position="bottom center" style="display: none;">
+		      <img src="{{url_for('static',filename='images/GJ.jpg')}}" alt="" data-position="bottom center" style="display: none;">
         
             </div><div class="content">
                 
@@ -223,7 +223,7 @@
                 
             </header>
 
-            <form name="contactform" method="post" action="assets/send-email.php">
+	    <form name="contactform" method="post" action="{{url_for('static', filename='assets/send-email.php')}}">
             
             <div class="field half first">
                                
